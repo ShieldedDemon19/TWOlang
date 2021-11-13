@@ -47,53 +47,53 @@ namespace TWO
 			{
 				char i = data[k];
 
-                switch(i) 
+                		switch(i) 
 				{
 					case '.': //add to a
 						a++;
-                        operand = -1;
+                        			operand = -1;
 						break;
 					
 					case ',': //sub from a
 						a--;
-                        operand = -1;
+                       				operand = -1;
 						break;
 
 					case '>': //add to b
 						b++;
-                        operand = -1;
+                        			operand = -1;
 						break;
 
 					case '<': //sub from b
 						b--;
-                        operand = -1;
+                        			operand = -1;
 						break;
 
-                    case '!': //tell interpreter to do something
-                        operand = b;
-                        break;
+                    			case '!': //tell interpreter to do something
+                        			operand = b;
+                        			break;
 
 					default: //invalid characters are skipped
-                        operand = -1;
+                        			operand = -1;
 						break;
 				}
 
 				TWO(operand, a);
 
-                if(k+1 == data.Length && !PE)
-                {
-                    Console.Write('\n');
-                    a = 0;
-                    b = 0;
-                    k = -1;
-                    data = Console.ReadLine();
-                    continue;
-                }
+                		if(k+1 == data.Length && !PE)
+                		{
+                			Console.Write('\n');
+                    			a = 0;
+                    			b = 0;
+                    			k = -1;
+                    			data = Console.ReadLine();
+                    			continue;
+                		}
 
-                if(PE)
-                {
-                  break;
-                }
+                		if(PE)
+                		{
+                  			break;
+                		}
 			}
             Console.Write('\n');
             Console.WriteLine("PRESS ANY KEY TO CONTINUE");
@@ -124,9 +124,11 @@ namespace TWO
                 default:
                     break;
             }
-		}
+	}
     }
 }
+
+//sorry for any of the akward or strange indentation. I'm not sure why it happened, but it did.
 
 /*
 	OTHER OPERANDS
