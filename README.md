@@ -2,7 +2,7 @@
 
 Two, as the name suggests, is an esolang with only two variables *(A, B)*. It was created by Shielded Demon 19 *(melonkgur)* during class because he was bored. 
 
-*Also, this is my first github project. I will inevitably mess it up somehow. Just you wait.*
+*Also, if you couldn't tell already, I wrote this in c#. You are going to need a compiler, such as [Mono](https://www.mono-project.com/docs/about-mono/languages/csharp/).*
 
 ## TWO Commands
 
