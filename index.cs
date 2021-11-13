@@ -38,9 +38,10 @@ namespace TWO
         public static void Main(string[] args)
         {
             Console.Title = "TWO";
+	    Console.WriteLine($"PROGRAM READY { CharTable.Length }");
             string data = Console.ReadLine(); //get data from user
             int a = 0; //first variable, used for data, etc.
-			int b = 0; //second variable, used for functions and events, etc.
+	    int b = 0; //second variable, used for functions and events, etc.
             int operand = -1;
 
 			for(int k = 0; k < data.Length; k++)
