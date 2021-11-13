@@ -51,6 +51,11 @@ namespace TWO
 			
 			for(int k = 0; k < data.Length; k++)
 			{
+				if(a < 0 || a > CharTable.Length - 1)
+				{
+					a = 0;
+				}
+				
 				char i = data[k];
 				
 				switch(i) 
@@ -80,13 +85,12 @@ namespace TWO
 						break;
                         
                     case '[':
-                        operand = 3;
                         Loop = true;
                         ks = k;
                         break;
                         
                     case ']':
-                        if(Loop && b != 0){
+                        if(Loop && b >= 0){
                             k = ks;
                         }else{
                             Loop = false;
@@ -129,7 +133,7 @@ namespace TWO
 					break;
 					
 				case 1: //output character
-					if(CharTable[a] != 0 && a < CharTable.Length)
+					if(a >= 0 && a < CharTable.Length)
 					{
 						Console.Write(CharTable[a]);
 					}else{
