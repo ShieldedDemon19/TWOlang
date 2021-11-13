@@ -78,7 +78,7 @@ namespace TWO
 						break;
 				}
 
-				TWO(operand, a);
+				TWO(operand, a); //call function that handles interpreter calls
 
                 		if(k+1 == data.Length && !PE)
                 		{
@@ -100,30 +100,30 @@ namespace TWO
             Console.ReadKey();
         }
 
-		public static void TWO(int operand, int a)
-		{
-            switch(operand)
-            {
-                case 0:
-                    PE = true;
-                    break;
+	public static void TWO(int operand, int a)
+	{
+		switch(operand)
+            	{
+                	case 0://die
+                		PE = true;
+                    		break;
+				
+                	case 1: //output character
+                    		if(CharTable[a] != 0 && a < CharTable.Length)
+                    		{
+                        		Console.Write(CharTable[a]);
+                    		}else{
+                       			Console.WriteLine($"INVALID CHAR: { a } "); //this chunk is bugged. fix later.
+              			}
+               			break;
 
-                case 1:
-                    if(CharTable[a] != 0 && a < CharTable.Length)
-                    {
-                        Console.Write(CharTable[a]);
-                    }else{
-                        Console.WriteLine($"INVALID CHAR: { a } ");
-                    }
-                    break;
+               		case 2://output a raw
+               			Console.WriteLine(a);
+				break;
 
-                case 2:
-                    Console.WriteLine(a);
-                    break;
-
-                default:
-                    break;
-            }
+                	default://broken? skip it!
+           	    		break;
+            	}
 	}
     }
 }
