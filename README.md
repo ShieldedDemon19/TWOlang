@@ -12,7 +12,8 @@ TWO is a very simple language. A is used purely for data, while B is used to sto
 - To increment B, type " `>` ".
 - To decrement B, type " `<` ".
 - To call the interpreter, type " `!` ". 
-- Looping coming soon!
+- To mark the start a loop, type " `[` ".
+- To mark the end of a loop, type " `]` ".
 
 ## TWO Interpreter calls
 
@@ -28,4 +29,11 @@ This is what a simple "hello world" program would look like in TWO:
 
 `>........!,,,!.......!!...!,,,,,,,,,,,,,,,!.......................!,,,,,,,,!...!,,,,,,!,,,,,,,,!<!`
 
+## TWO Loops
+
+A loop will keep running so long as B is greater than 0. Once B is equal to zero, it will continue reading after it. The following program will output every letter in the TWO alphabet, **forever**.
+
+`>[.!]`
+
 *god, this really is horrible.*
+
