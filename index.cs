@@ -15,10 +15,11 @@
 
 */
 
+//untested beta
 
 /*
 	FEATURES TO ADD:
-	loops
+	loops [x]
 	add/div/mul/sub a & b
 	input
 	other various garbage
@@ -33,7 +34,10 @@ namespace TWO
 	{
 		static char[] CharTable = {' ', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '\n'};
 		//maybe replace this garbage with ascii sometime
+        
 		static bool PE = false;
+        
+        static bool Loop = false;
 		
 		public static void Main(string[] args)
 		{
@@ -43,6 +47,7 @@ namespace TWO
 			int a = 0; //first variable, used for data, etc.
 			int b = 0; //second variable, used for functions and events, etc.
 			int operand = -1;
+            int ks = 0;
 			
 			for(int k = 0; k < data.Length; k++)
 			{
@@ -73,6 +78,20 @@ namespace TWO
 					case '!': //tell interpreter to do something
 						operand = b;
 						break;
+                        
+                    case '[':
+                        operand = 3;
+                        Loop = true;
+                        ks = k;
+                        break;
+                        
+                    case ']':
+                        if(Loop && b != 0){
+                            k = ks;
+                        }else{
+                            Loop = false;
+                        }
+                        break;
 						
 					default: //invalid characters are skipped
 						operand = -1;
@@ -135,6 +154,8 @@ namespace TWO
 	> - increase b 
 	< - decrease b 
 	! - call function based on b's current value
+	[ - start loop
+	] - end loop
 	
 	0 - end program
 	1 - output character in a 
