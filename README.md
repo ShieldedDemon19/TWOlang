@@ -2,7 +2,7 @@
 
 Two, as the name suggests, is an esolang with only two variables *(A, B)*. It was created by Shielded Demon 19 *(melonkgur)* during class because he was bored. 
 
-*Also, this is my first github project. I will inevitably mess it up somehow. Just you wait.f*
+*Also, this is my first github project. I will inevitably mess it up somehow. Just you wait.*
 
 ## TWO Commands
 
