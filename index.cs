@@ -15,8 +15,6 @@
 
 */
 
-//untested beta
-
 /*
 	FEATURES TO ADD:
 	loops [x]
@@ -26,7 +24,7 @@
 */
 
 using System;
-using System.IO;
+using System.IO; //probably not needed yet. file import support coming somtime, maybe never.
 
 namespace TWO
 {
@@ -36,23 +34,25 @@ namespace TWO
 		//maybe replace this garbage with ascii sometime
         
 		static bool PE = false;
+		//die, or die?
 		
 		static bool Loop = false;
+		//in a loop, or NHYOOM
 		
 		public static void Main(string[] args)
 		{
 			Console.Title = "TWO"; //incase you decide to rename the project or something idrk
 			Console.WriteLine($"PROGRAM READY { CharTable.Length }"); //purely for debug purposes.
-			string data = Console.ReadLine(); //get data from user
+			string data = Console.ReadLine();
 			int a = 0; //first variable, used for data, etc.
 			int b = 0; //second variable, used for functions and events, etc.
 			int operand = -1;
 			int ks = 0;
 			
 			for(int k = 0; k < data.Length; k++)
-			{
+			{ //main loop
 				if(a < 0 || a > CharTable.Length - 1)
-				{
+				{ //check if a is OOB
 					a = 0;
 				}
 				
@@ -129,7 +129,7 @@ namespace TWO
 				TWO(operand, a); //call function that handles interpreter calls
 				
 				if(k+1 == data.Length && !PE)
-				{
+				{ //reset
 					Console.Write('\n');
 					a = 0;
 					b = 0;
@@ -139,7 +139,7 @@ namespace TWO
 				}
 				
 				if(PE)
-				{
+				{ //die
 					break;
 				}
 			}
@@ -149,7 +149,7 @@ namespace TWO
 		}
 		
 		static void TWO(int operand, int a)
-		{
+		{ //operations
 			switch(operand)
 			{
 				case 0: //die
@@ -158,9 +158,9 @@ namespace TWO
 					
 				case 1: //output character
 					if(a >= 0 && a < CharTable.Length)
-					{
+					{ //ouput funny characters
 						Console.Write(CharTable[a]);
-					}else{
+					}else{ //check if i broke something
 						Console.WriteLine($"INVALID CHAR: { a } "); //this chunk might be bugged bugged. fix later.
 					}
 					break;
