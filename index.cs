@@ -166,7 +166,7 @@ namespace TWO
 					break;
 					
 				case 2://output a raw
-					Console.WriteLine(a);
+					Console.Write(a);
 					break;
 					
 				default://broken? skip it!
