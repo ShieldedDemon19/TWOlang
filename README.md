@@ -14,6 +14,10 @@ TWO is a very simple language. A is used purely for data, while B is used to sto
 - To call the interpreter, type " `!` ". 
 - To mark the start a loop, type " `[` ".
 - To mark the end of a loop, type " `]` ".
+- To add both variables (and store it in a), type " `+` "
+- To subtract both variables (and store it in a), type " `-` "
+- To add both variables and store the result in *both* a and b, type " `$` "
+- To subtract both variables and store the result in *both* a and b, type " `_` "
 
 ## TWO Interpreter calls
 
