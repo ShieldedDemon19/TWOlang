@@ -56,6 +56,11 @@ namespace TWO
 					a = 0;
 				}
 				
+				if(b < 0)
+				{
+					b = 0;
+				}
+				
 				char i = data[k];
 				
 				switch(i) 
