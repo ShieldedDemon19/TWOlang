@@ -41,8 +41,8 @@ namespace TWO
 		
 		public static void Main(string[] args)
 		{
-			Console.Title = "TWO";
-			Console.WriteLine($"PROGRAM READY { CharTable.Length }");
+			Console.Title = "TWO"; //incase you decide to rename the project or something idrk
+			Console.WriteLine($"PROGRAM READY { CharTable.Length }"); //purely for debug purposes.
 			string data = Console.ReadLine(); //get data from user
 			int a = 0; //first variable, used for data, etc.
 			int b = 0; //second variable, used for functions and events, etc.
