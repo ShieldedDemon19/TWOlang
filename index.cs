@@ -36,8 +36,8 @@ namespace TWO
 		//maybe replace this garbage with ascii sometime
         
 		static bool PE = false;
-        
-        static bool Loop = false;
+		
+		static bool Loop = false;
 		
 		public static void Main(string[] args)
 		{
@@ -112,6 +112,14 @@ namespace TWO
 							b = temp;
 						}
 						break;
+						
+					case '_':
+						{
+							int temp = a-b;
+							a = temp;
+							b = temp;
+						}
+						break;
 					
 					default: //invalid characters are skipped
 						operand = -1;
@@ -179,6 +187,7 @@ namespace TWO
 	+ - add a and b and store in a
 	- - subtract a and b and store in a
 	$ - add a and b and store in both
+	_ - subtract a and b and store in both
 	more operations coming soon!
 	
 	0 - end program
