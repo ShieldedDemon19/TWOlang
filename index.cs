@@ -27,9 +27,9 @@ using System;
 using System.IO; //probably not needed yet. file import support coming somtime, maybe never.
 
 namespace TWO
-{
+{ //devilmayquake.com
 	public class Interpreter
-	{
+	{ //corndog.io
 		static char[] CharTable = {' ', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '\n'};
 		//maybe replace this garbage with ascii sometime
         
@@ -39,14 +39,20 @@ namespace TWO
 		static bool Loop = false;
 		//in a loop, or NHYOOM
 		
+		static int operand = -1;
+		//dunno why i need this, it is just kinda existing.
+		
+		static int a = 0; 
+		//first variable, used for data, etc.
+		
+		static int b = 0; 
+		//second variable, used for functions and events, etc
+		
 		public static void Main(string[] args)
 		{
 			Console.Title = "TWO"; //incase you decide to rename the project or something idrk
 			Console.WriteLine($"PROGRAM READY { CharTable.Length }"); //purely for debug purposes.
 			string data = Console.ReadLine();
-			int a = 0; //first variable, used for data, etc.
-			int b = 0; //second variable, used for functions and events, etc.
-			int operand = -1;
 			int ks = 0;
 			
 			for(int k = 0; k < data.Length; k++)
@@ -131,7 +137,7 @@ namespace TWO
 						break;
 				}
 				
-				TWO(operand, a); //call function that handles interpreter calls
+				TWO(); //call function that handles interpreter calls
 				
 				if(k+1 == data.Length && !PE)
 				{ //reset
@@ -153,7 +159,7 @@ namespace TWO
 			Console.ReadKey();
 		}
 		
-		static void TWO(int operand, int a)
+		static void TWO()
 		{ //operations
 			switch(operand)
 			{
@@ -173,6 +179,21 @@ namespace TWO
 				case 2://output a raw
 					Console.Write(a);
 					break;
+					
+				case 3:
+					{
+						char temp = Console.ReadKey(true).KeyChar;
+						for(int i = 0; i < CharTable.Length; i++)
+						{
+							if(temp == CharTable[i])
+							{
+								a = i;
+								break;
+							}
+						}
+					}
+          break;
+					
 					
 				default://broken? skip it!
 					break;
@@ -198,5 +219,5 @@ namespace TWO
 	0 - end program
 	1 - output character in a 
 	2 - output a raw
-	More coming soon!
+	3 - input into a
 */
