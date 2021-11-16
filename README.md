@@ -49,7 +49,7 @@ Since there are only two variables (and both of them are stored as numbers), you
 
 `>>>!,<<!>>!,<<!>>!,<<!>>!,<<!<!`
 
-This program takes four characters that you input, then shifts it one character to the left in the system alphabet. So, if you were to type "funk", you would be greeted with this beautiful work of literature:
+This program takes four characters that you input, then shifts it one character to the left in the TWO alphabet. So, if you were to type "funk", you would be greeted with this beautiful work of literature:
 
 `etmj`
 
