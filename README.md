@@ -25,7 +25,7 @@ Upon reading an exclamation point, the interpreter will call a special function.
 - If B is 0, the program will close. *(pressing enter with nothing on the current line will do the same thing)*
 - If B is 1, the program will use the current value in A and output a character. This character can be anything from 0 to 27 *([space], a, b c... x, y, z, \n)*.
 - If B is 2, the program will output the current numerical value of A.
-- User input is coming soon!
+- If B is 3, the program will save the next key press, then find its value and store it in A.
 
 ## TWO Hello world example
 
@@ -33,11 +33,24 @@ This is what a simple "hello world" program would look like in TWO:
 
 `>........!,,,!.......!!...!,,,,,,,,,,,,,,,!.......................!,,,,,,,,!...!,,,,,,!,,,,,,,,!<!`
 
+*It's so fricking long holy crap. expect an update to this, maybe.*
+
 ## TWO Loops
 
 A loop will keep running so long as B is greater than 0. Once B is equal to zero, it will continue reading after it. The following program will output every letter in the TWO alphabet, **forever**.
 
 `>[.!]`
 
-*god, this really is horrible.*
+*I know, I know. Useful really should be my middle name, shouldn't it?*
 
+## TWO User input
+
+Since there are only two variables (and both of them are stored as numbers), you can only get input *one character at a time*. It does not show what the user pressed in the console, that is up to you to output. Here is an example of a simple program utilizing this feature:
+
+`>>>!,<<!>>!,<<!>>!,<<!>>!,<<!<!`
+
+This program takes four characters that you input, then shifts it one character to the left in the system alphabet. So, if you were to type "funk", you would be greeted with this beautiful work of literature:
+
+`etmj`
+
+*Stunning, right!?*
