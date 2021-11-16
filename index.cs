@@ -182,7 +182,9 @@ namespace TWO
 					
 				case 3:
 					{
-						char temp = Console.ReadKey(true).KeyChar;
+						char temp = char.ToLower(Console.ReadKey(true).KeyChar);
+						//fixed this bit. get user input, turn to lowercase, and see if its in the TWO alphabet.
+						
 						for(int i = 0; i < CharTable.Length; i++)
 						{
 							if(temp == CharTable[i])
