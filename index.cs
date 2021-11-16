@@ -220,5 +220,6 @@ namespace TWO
 	1 - output character in a 
 	2 - output a raw
 	3 - input into a
+	4 - [NOT IMPLEMENTED] Import file and run
 	more stuff comin sone!
 */
