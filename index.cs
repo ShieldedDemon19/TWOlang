@@ -192,7 +192,7 @@ namespace TWO
 							}
 						}
 					}
-          break;
+					break;
 					
 					
 				default://broken? skip it!
@@ -220,4 +220,5 @@ namespace TWO
 	1 - output character in a 
 	2 - output a raw
 	3 - input into a
+	more stuff comin sone!
 */
