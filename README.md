@@ -26,6 +26,7 @@ Upon reading an exclamation point, the interpreter will call a special function.
 - If B is 1, the program will use the current value in A and output a character. This character can be anything from 0 to 27 *([space], a, b c... x, y, z, \n)*.
 - If B is 2, the program will output the current numerical value of A.
 - If B is 3, the program will save the next key press, then find its value and store it in A.
+- If B is 4, The program will save a number that the user enters into A.
 
 ## TWO Hello world example
 
