@@ -24,7 +24,7 @@
 */
 
 using System;
-using System.IO; //probably not needed yet. file import support coming somtime, maybe never.
+//using System.IO; //probably not needed yet. file import support coming somtime, maybe never.
 
 namespace TWO
 { //devilmayquake.com
@@ -196,6 +196,15 @@ namespace TWO
 					}
 					break;
 					
+				case 4:
+					{
+						try{
+							int temp = Convert.ToInt32(Console.ReadLine());
+							a = temp;
+						}finally{}
+					}
+					break;
+					
 					
 				default://broken? skip it!
 					break;
@@ -221,7 +230,7 @@ namespace TWO
 	0 - end program
 	1 - output character in a 
 	2 - output a raw
-	3 - input into a
-	4 - [NOT IMPLEMENTED] Import file and run
+	3 - input char into a
+	4 - input raw number into a
 	more stuff comin sone!
 */
