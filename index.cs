@@ -199,6 +199,7 @@ namespace TWO
 						{
 							tempTwo = Console.ReadKey(true).KeyChar;
 							
+							//broken bad \n doesnt work literalyy crying. run. 
 							if(tempTwo == ' ' || tempTwo == '\n')
 							{
 								a = temp;
