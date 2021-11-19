@@ -191,13 +191,7 @@ namespace TWO
 					break;
 					
 				case 4:
-					{
-						/*try{
-							int temp = Convert.ToInt32(Console.ReadLine());
-							a = temp;
-						}finally{}
-						*/
-						
+					{	
 						int temp = 0;
 						int intermediate = 0;
 						char tempTwo = '\0';
@@ -213,10 +207,8 @@ namespace TWO
 							
 							intermediate = (int) Char.GetNumericValue(tempTwo);
 							
-							//temp equals temp plus intermediate times 10 to the power of i?
-							//this reads backwards. redo to read forwards later.\
-							//think it's fixed????????
-							//WHY DOES IT AUTOCONVERT CHARS TO THEIR ASCII EQUIVALENT INTSTEAD OF THE ACTUAL NUMBER WHAT THE H*CK
+							//temp (current value to import) times ten to the power of i (current iteration) plus intermediate (new num to add)
+							//great algorithm, i know. hire me microsoft
 							temp = (temp * (int) Math.Pow(10, i)) + intermediate;
 						}
 					}
