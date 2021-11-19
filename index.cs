@@ -57,11 +57,6 @@ namespace TWO
 			
 			for(int k = 0; k < data.Length; k++)
 			{ //main loop
-				if(a < 0 || a > CharTable.Length - 1)
-				{ //check if a is OOB
-					a = 0;
-				}
-				
 				if(b < 0)
 				{
 					b = 0;
@@ -116,7 +111,7 @@ namespace TWO
 						a = a-b;
 						break;
 					
-					case '$': //mula mula operator 
+					case '$': //cash money operator 
 						{
 							int temp = a+b;
 							a = temp;
@@ -124,7 +119,7 @@ namespace TWO
 						}
 						break;
 						
-					case '_':
+					case '_': //depression operator
 						{
 							int temp = a-b;
 							a = temp;
@@ -157,7 +152,7 @@ namespace TWO
 			Console.Write('\n');
 			Console.WriteLine("PRESS ANY KEY TO CONTINUE");
 			Console.ReadKey();
-		}
+		} //commit die
 		
 		static void TWO()
 		{ //operations
@@ -168,12 +163,11 @@ namespace TWO
 					break;
 					
 				case 1: //output character
-					if(a >= 0 && a < CharTable.Length)
-					{ //ouput funny characters
-						Console.Write(CharTable[a]);
-					}else{ //check if i broke something
-						Console.WriteLine($"INVALID CHAR: { a } "); //this chunk might be bugged bugged. fix later.
+					if(a < 0 || a > CharTable.Length - 1)
+					{ //check if a is OOB
+						a = 0;
 					}
+					Console.Write(CharTable[a]);
 					break;
 					
 				case 2://output a raw
@@ -198,10 +192,33 @@ namespace TWO
 					
 				case 4:
 					{
-						try{
+						/*try{
 							int temp = Convert.ToInt32(Console.ReadLine());
 							a = temp;
 						}finally{}
+						*/
+						
+						int temp = 0;
+						int intermediate = 0;
+						char tempTwo = '\0';
+						for(int i = 0; i < 9; i++)
+						{
+							tempTwo = Console.ReadKey(true).KeyChar;
+							
+							if(tempTwo == ' ' || tempTwo == '\n')
+							{
+								a = temp;
+								break; //die if they type space or something i have no idea what im doing anymore please send helb
+							}
+							
+							intermediate = (int) Char.GetNumericValue(tempTwo);
+							
+							//temp equals temp plus intermediate times 10 to the power of i?
+							//this reads backwards. redo to read forwards later.\
+							//think it's fixed????????
+							//WHY DOES IT AUTOCONVERT CHARS TO THEIR ASCII EQUIVALENT INTSTEAD OF THE ACTUAL NUMBER WHAT THE H*CK
+							temp = (temp * (int) Math.Pow(10, i)) + intermediate;
+						}
 					}
 					break;
 					
