@@ -91,11 +91,13 @@ namespace TWO
 						break;
 						
 					case '[': //start loop
+						operand = -1;
 						Loop = true;
 						ks = k;
 						break;
 					
 					case ']': //end loop
+						operand = -1;
 						if(Loop && b >= 0){
 							k = ks;
 						}else{
