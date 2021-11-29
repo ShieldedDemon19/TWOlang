@@ -38,7 +38,7 @@ This is what a simple "hello world" program would look like in TWO:
 
 ## TWO Loops
 
-A loop will keep running so long as B is greater than 0. Once B is equal to zero, it will continue reading after it. The following program will output every letter in the TWO alphabet, **forever**.
+A loop will keep running so long as B is greater than 0. Once B is equal to zero, it will continue reading after it. The following program will output every letter in the TWO alphabet, **forever**. *(now actually works)*
 
 `>[.!]`
 
@@ -54,4 +54,4 @@ This program takes four characters that you input, then shifts it one character 
 
 `etmj`
 
-*Stunning, right!?*
+*ah, beautiful... rivals that of **AMONGUS** *
