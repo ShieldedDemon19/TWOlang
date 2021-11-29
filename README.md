@@ -54,4 +54,4 @@ This program takes four characters that you input, then shifts it one character 
 
 `etmj`
 
-*ah, beautiful... rivals that of **AMONGUS** *
+*ah, beautiful... rivals that of AMONGUS*
