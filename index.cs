@@ -15,32 +15,24 @@
 
 */
 
-/*
-	FEATURES TO ADD:
-	loops [x]
-	add/div/mul/sub a & b
-	input
-	other various garbage
-*/
-
 using System;
-//using System.IO; //probably not needed yet. file import support coming somtime, maybe never.
+//file import support might be coming soon, maybe, i dunno.
 
 namespace TWO
-{ //devilmayquake.com
+{ 
 	public class Interpreter
-	{ //corndog.io
+	{ 
 		static char[] CharTable = {' ', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '\n'};
 		//maybe replace this garbage with ascii sometime
         
 		static bool PE = false;
-		//die, or die?
+		//if this is true, the program will stop.
 		
 		static bool Loop = false;
-		//in a loop, or NHYOOM
+		//Controls looping.
 		
 		static int operand = -1;
-		//dunno why i need this, it is just kinda existing.
+		//controls operations
 		
 		static int a = 0; 
 		//first variable, used for data, etc.
@@ -57,6 +49,8 @@ namespace TWO
 			
 			for(int k = 0; k < data.Length; k++)
 			{ //main loop
+				operand = -1;
+				
 				if(b < 0)
 				{
 					b = 0;
@@ -68,22 +62,18 @@ namespace TWO
 				{
 					case '.': //add to a
 						a++;
-						operand = -1;
 						break;
 						
 					case ',': //sub from a
 						a--;
-						operand = -1;
 						break;
 						
 					case '>': //add to b
 						b++;
-						operand = -1;
 						break;
 						
 					case '<': //sub from b
 						b--;
-						operand = -1;
 						break;
 						
 					case '!': //tell interpreter to do something
@@ -91,13 +81,11 @@ namespace TWO
 						break;
 						
 					case '[': //start loop
-						operand = -1;
 						Loop = true;
 						ks = k;
 						break;
 					
 					case ']': //end loop
-						operand = -1;
 						if(Loop && b > 0){
 							k = ks;
 						}else{
@@ -130,7 +118,6 @@ namespace TWO
 						break;
 					
 					default: //invalid characters are skipped
-						operand = -1;
 						break;
 				}
 				
@@ -147,20 +134,20 @@ namespace TWO
 				}
 				
 				if(PE)
-				{ //die
+				{ //stop loop
 					break;
 				}
 			}
 			Console.Write('\n');
 			Console.WriteLine("PRESS ANY KEY TO CONTINUE");
 			Console.ReadKey();
-		} //commit die
+		}
 		
 		static void TWO()
 		{ //operations
 			switch(operand)
 			{
-				case 0: //die
+				case 0: //kill loop
 					PE = true;
 					break;
 					
@@ -201,24 +188,24 @@ namespace TWO
 						{
 							tempTwo = Console.ReadKey(true).KeyChar;
 							
-							//broken bad \n doesnt work literalyy crying. run. 
+							//sadly, \n doesnt actually work. not entirely sure why. 
 							if(tempTwo == ' ' || tempTwo == '\n')
 							{
 								a = temp;
-								break; //die if they type space or something i have no idea what im doing anymore please send helb
+								break; //stop if user presses space
 							}
 							
 							intermediate = (int) Char.GetNumericValue(tempTwo);
 							
 							//temp (current value to import) times ten to the power of i (current iteration) plus intermediate (new num to add)
-							//great algorithm, i know. hire me microsoft
+							//great algorithm, i know. hire me microsof
 							temp = (temp * (int) Math.Pow(10, i)) + intermediate;
 						}
 					}
 					break;
 					
 					
-				default://broken? skip it!
+				default: //anything that isnt stated does nothing. 
 					break;
 			}
 		}
