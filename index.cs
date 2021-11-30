@@ -98,7 +98,7 @@ namespace TWO
 					
 					case ']': //end loop
 						operand = -1;
-						if(Loop && b >= 0){
+						if(Loop && b > 0){
 							k = ks;
 						}else{
 							Loop = false;
