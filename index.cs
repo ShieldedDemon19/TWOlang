@@ -192,8 +192,7 @@ namespace TWO
 						{
 							tempTwo = Console.ReadKey(true).KeyChar;
 							
-							//sadly, \n doesnt actually work. not entirely sure why. 
-							if(tempTwo == ' ' || tempTwo == '\n')
+							if(tempTwo == ' ' || tempTwo == '\n' || tempTwo == '\r')
 							{
 								a = temp;
 								break; //stop if user presses space
