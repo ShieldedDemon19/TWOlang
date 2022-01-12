@@ -6,7 +6,7 @@ Two, as the name suggests, is an esolang with only two variables *(A, B)*. It wa
 
 ## TWO Commands
 
-TWO is a very simple language. A is used purely for data, while B is used to store data *as well as* call specific functions. Here is all of the current commands: 
+TWO is a very simple language. A is used purely for data, while B is used to store data *as well as* to call specific functions. Here is all of the current commands: 
 - To increment A, type " `.` ".
 - To decrement A, type " `,` ".
 - To increment B, type " `>` ".
