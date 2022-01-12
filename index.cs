@@ -116,6 +116,10 @@ namespace TWO
 							b = temp;
 						}
 						break;
+					case '~': //the "flushed" operator
+						a = 0;
+						b = 0;
+						break;
 					
 					default: //invalid characters are skipped
 						break;
