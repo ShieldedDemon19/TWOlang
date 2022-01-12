@@ -14,11 +14,11 @@ TWO is a very simple language. A is used purely for data, while B is used to sto
 - To call the interpreter, type " `!` ". 
 - To mark the start a loop, type " `[` ".
 - To mark the end of a loop, type " `]` ".
-- To add both variables (and store it in a), type " `+` "
-- To subtract both variables (and store it in a), type " `-` "
-- To add both variables and store the result in *both* a and b, type " `$` "
-- To subtract both variables and store the result in *both* a and b, type " `_` "
-- To flush both A & B (set their values equal to zero), type " `~` "
+- To add both variables *(and store it in A)*, type " `+` "
+- To subtract both variables *(and store it in A)*, type " `-` "
+- To add both variables and store the result in *both* A and B, type " `$` "
+- To subtract both variables and store the result in *both* A and B, type " `_` "
+- To flush both A & B *(set their values equal to zero)*, type " `~` "
 
 ## TWO Interpreter calls
 
@@ -57,3 +57,11 @@ This program takes four characters that you input, then shifts it one character 
 `etmj`
 
 *ah, beautiful... rivals that of shakespeare.*
+
+You can also input regular numbers to store in A, as mentioned previously, by calling the interpreter with 4 inside of B.
+
+`>>>>!<<!`
+
+This program gets a number that the user inputs, and then spits it back out. 
+
+*hire me minecrosmoft.*
