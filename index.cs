@@ -207,7 +207,10 @@ namespace TWO
 					}
 					break;
 					
-					
+				case 5: //self advertisement
+					Console.Write("credits: this beautiful program was coded by shieldeddemon19 on github. go like and subscribe or whatever");
+					break;
+				
 				default: //anything that isnt stated does nothing. 
 					break;
 			}
@@ -227,6 +230,7 @@ namespace TWO
 	- - subtract a and b and store in a
 	$ - add a and b and store in both
 	_ - subtract a and b and store in both
+	~ - flush
 	more operations coming soon!
 	
 	0 - end program
@@ -234,5 +238,6 @@ namespace TWO
 	2 - output a raw
 	3 - input char into a
 	4 - input raw number into a
+	5 - advertisement
 	more stuff comin sone!
 */
