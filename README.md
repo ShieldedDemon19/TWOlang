@@ -18,6 +18,7 @@ TWO is a very simple language. A is used purely for data, while B is used to sto
 - To subtract both variables (and store it in a), type " `-` "
 - To add both variables and store the result in *both* a and b, type " `$` "
 - To subtract both variables and store the result in *both* a and b, type " `_` "
+- To flush both A & B (set their values equal to zero), type " `~` "
 
 ## TWO Interpreter calls
 
@@ -26,7 +27,8 @@ Upon reading an exclamation point, the interpreter will call a special function.
 - If B is 1, the program will use the current value in A and output a character. This character can be anything from 0 to 27 *([space], a, b c... x, y, z, \n)*.
 - If B is 2, the program will output the current numerical value of A.
 - If B is 3, the program will save the next key press, then find its value and store it in A.
-- If B is 4, The program will save a number that the user enters into A.
+- If B is 4, the program will save a number that the user enters into A.
+- If B is 5, the program will output the credits.
 
 ## TWO Hello world example
 
@@ -34,7 +36,7 @@ This is what a simple "hello world" program would look like in TWO:
 
 `>........!,,,!.......!!...!,,,,,,,,,,,,,,,!.......................!,,,,,,,,!...!,,,,,,!,,,,,,,,!<!`
 
-*It's so fricking long, holy. expect an update to this with loops, maybe.*
+*It's so fricking long, holy. expect an update to this with loops, maybe. or not. probably not.*
 
 ## TWO Loops
 
@@ -54,4 +56,4 @@ This program takes four characters that you input, then shifts it one character 
 
 `etmj`
 
-*ah, beautiful... rivals that of AMONGUS*
+*ah, beautiful... rivals that of shakespeare.*
